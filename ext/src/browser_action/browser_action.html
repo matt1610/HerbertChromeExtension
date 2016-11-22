@@ -57,10 +57,32 @@
         padding-bottom: 30px;
       }
 
+      /*style to display slider value*/
+      p#rangeDisplay{
+        color: #16a085;
+        padding: 0;
+        margin: 0;
+        font-size: 15px;
+        display: inline-block;  
+        margin-left: 5px;
+      }
+
 </style>
 
-<div id="mainPopup">
+<!-- Angular script -->
+<script src="../../js/angular/angular.min.js"></script>
+
+<div id="mainPopup" ng-app="">
 	<div class="container"> 
-    	<input type="range" min="0" max="2" value="1">
+    	<input type="range" min="0" max="2" value="1" ng-model="rangeVal">
+      <!-- expression showing in extension rather than value. works fine in browser -->
+      <p id="rangeDisplay">{{ rangeVal }}</p>
+
+      <!-- js attempt, but won't run via extension and needs to be in seperate file
+
+      <input type="range" id="rangeVal" name="result" min="0" max="2" value="1" onchange="document.getElementById('rangeValDisplay').innerHTML = this.value;">
+      <p id="rangeDisplay"></p>
+       -->
+
    	</div>
 </div>
