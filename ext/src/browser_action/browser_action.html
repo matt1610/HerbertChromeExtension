@@ -73,7 +73,7 @@
 <!-- Angular script -->
 <script src="../../js/angular/angular.min.js"></script>
 
-<div id="mainPopup" ng-app="">
+<div id="mainPopup" ng-app="app" ng-controller="popupController">
 	<div class="container"> 
     	<input type="range" min="0" max="2" value="1" ng-model="rangeVal">
       <!-- expression showing in extension rather than value. works fine in browser -->
@@ -87,3 +87,8 @@
 
    	</div>
 </div>
+
+<!-- app -->
+<script src="js/app.js" type="text/javascript"></script>
+<!-- popup controller -->
+<script src="js/popupController.js" type="text/javascript"></script>
