@@ -5,12 +5,14 @@ app.controller("popupController", function($scope){
 		$scope.min = 0;
 		$scope.max = 2;
 
+		$scope.message = "";
+
 			if($scope.rangeVal == $scope.min){
-				console.log('minimum filter');
+				$scope.message = 'minimum filter';
 				} else if ($scope.rangeVal == $scope.max){
-					console.log('maximum filter');
+					$scope.message = 'maximum filter';
 						} else {
-							console.log('medium filter');
+							$scope.message = 'medium filter';
 							}
 			}
 			//console.log($scope.rangeVal);
