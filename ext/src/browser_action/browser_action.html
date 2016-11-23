@@ -75,7 +75,7 @@
 
 <div id="mainPopup" ng-app="app" ng-controller="popupController">
 	<div class="container"> 
-    	<input type="range" min="0" max="2" value="1" ng-model="rangeVal">
+    	<input type="range" min="0" max="2" value="1" ng-model="rangeVal" ng-change="SliderChange()">
       <!-- expression showing in extension rather than value. works fine in browser -->
       <p id="rangeDisplay">{{ rangeVal }}</p>
 
