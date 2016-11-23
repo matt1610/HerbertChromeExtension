@@ -1,5 +1,4 @@
 app.controller("popupController", function($scope){
-
 	
 	$scope.SliderChange = function(){
 		$scope.min = 0;
@@ -15,7 +14,7 @@ app.controller("popupController", function($scope){
 							$scope.message = 'medium filter';
 							}
 			}
-			//console.log($scope.rangeVal);
-	
+
+	$scope.SliderChange();	
 	
 })
