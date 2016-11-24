@@ -1,6 +1,6 @@
 app.controller("popupController", function($scope){
 	
-	$scope.rangeVal = "1";
+	$scope.rangeVal = StorageArea.get('HerbertFilterLevel');
 
 	$scope.SliderChange = function(){
 		$scope.message = "";
@@ -34,6 +34,7 @@ app.controller("popupController", function($scope){
         }
         // Save it using the Chrome extension storage API.
         chrome.storage.sync.set({'HerbertFilterLevel': theValue});
-      }
+    }
+
 
 })
