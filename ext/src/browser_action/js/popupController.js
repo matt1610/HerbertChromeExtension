@@ -8,10 +8,10 @@ app.controller("popupController", function($scope){
 	            $scope.message = "minimum filter";
 	            break;
 	        case "1":
-	            $scope.message = "maximum filter";
+	            $scope.message = "medium filter";
 	            break;
 	        case "2":
-	            $scope.message = "medium filter";
+	            $scope.message = "maximum filter";
 	            break;
 	        default:
 	    }
