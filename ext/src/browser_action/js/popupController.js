@@ -1,5 +1,7 @@
 app.controller("popupController", function($scope){
 	
+	$scope.rangeVal = "1";
+
 	$scope.SliderChange = function(){
 		$scope.message = "";
 
