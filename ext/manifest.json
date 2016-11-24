@@ -30,7 +30,8 @@
     "contextMenus",
     "notifications",
     "tabs",
-    "geolocation"
+    "geolocation",
+    "storage"
   ],
   "content_scripts": [
     {
