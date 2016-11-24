@@ -4,13 +4,13 @@ app.controller("popupController", function($scope){
 		$scope.message = "";
 
 		switch ($scope.rangeVal) {
-	        case 0:
+	        case "0":
 	            $scope.message = "minimum filter";
 	            break;
-	        case 1:
+	        case "1":
 	            $scope.message = "maximum filter";
 	            break;
-	        case 2:
+	        case "2":
 	            $scope.message = "medium filter";
 	            break;
 	        default:
