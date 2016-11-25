@@ -1,6 +1,8 @@
 app.controller("popupController", function($scope){
 	
-	$scope.rangeVal = chrome.storage.sync.get('HerbertFilterLevel');
+	$scope.rangeVal = chrome.storage.sync.get('HerbertFilterLevel', function(data){
+		$scope.rangeVal = data.HerbertFilterLevel;
+	});
 
 	$scope.SliderChange = function(){
 		$scope.message = "";
