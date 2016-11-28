@@ -5,11 +5,13 @@ app.controller("popupController", function($scope){
 	chrome.storage.sync.get('HerbertFilterLevel', function(data){
 		$scope.rangeVal = data.HerbertFilterLevel;
 		$scope.$apply();
-		$scope.SliderChange();
+		$scope.SliderChange(true);
 	});
 
-	$scope.SliderChange = function(){
+	$scope.SliderChange = function(onLoad){
 		$scope.message = "";
+
+		console.log($scope.rangeVal);
 
 		switch ($scope.rangeVal) {
 	        case "0":
@@ -24,11 +26,13 @@ app.controller("popupController", function($scope){
 	        default:
 	    }
 
+	    if (onLoad) {
+	    	$scope.$apply();
+	    }
+
 	    // saves user selection.
 	    saveChanges();
 	}
-
-	$scope.SliderChange();	
 
 	function saveChanges() {
         // Get a value saved from input.
