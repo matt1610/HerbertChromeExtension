@@ -11,8 +11,6 @@ app.controller("popupController", function($scope){
 	$scope.SliderChange = function(onLoad){
 		$scope.message = "";
 
-		console.log($scope.rangeVal);
-
 		switch ($scope.rangeVal) {
 	        case "0":
 	            $scope.message = "minimum filter";
