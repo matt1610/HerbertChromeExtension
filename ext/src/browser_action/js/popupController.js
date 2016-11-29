@@ -2,13 +2,13 @@ app.controller("popupController", function($scope){
 
 	$scope.rangeVal = "0";
 	
-	chrome.storage.sync.get('HerbertFilterLevel', function(data){
+	chrome.storage.sync.get('test', function(data){
 		$scope.rangeVal = data.HerbertFilterLevel;
+		$scope.SliderChange();
 		$scope.$apply();
-		$scope.SliderChange(true);
 	});
 
-	$scope.SliderChange = function(onLoad){
+	$scope.SliderChange = function(){
 		$scope.message = "";
 
 		switch ($scope.rangeVal) {
@@ -22,10 +22,6 @@ app.controller("popupController", function($scope){
 	            $scope.message = "maximum filter";
 	            break;
 	        default:
-	    }
-
-	    if (onLoad) {
-	    	$scope.$apply();
 	    }
 
 	    // saves user selection.
