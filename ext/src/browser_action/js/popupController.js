@@ -3,7 +3,11 @@ app.controller("popupController", function($scope){
 	$scope.rangeVal = "0";
 	
 	chrome.storage.sync.get('HerbertFilterLevel', function(data){
-		$scope.rangeVal = data.HerbertFilterLevel;
+		
+		if (data.HerbertFilterLevel !== undefined) {
+			$scope.rangeVal = data.HerbertFilterLevel;
+		}
+		
 		$scope.SliderChange();
 		$scope.$apply();
 	});
