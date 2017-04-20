@@ -6,9 +6,9 @@
   "homepage_url": "http://extensionizr.com",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "icons": {
-    "16": "icons/icon16.png",
-    "48": "icons/icon48.png",
-    "128": "icons/icon128.png"
+    "16": "icons/Icon_01sm.png",
+    "48": "icons/Icon_01md.png",
+    "128": "icons/Icon_01lg.png"
   },
   "default_locale": "en",
   "background": {
@@ -19,8 +19,8 @@
   },
   "options_page": "src/options/index.html",
   "browser_action": {
-    "default_icon": "icons/icon19.png",
-    "default_title": "browser action demo",
+    "default_icon": "icons/Icon_01md.png",
+    "default_title": "Check source",
     "default_popup": "src/browser_action/browser_action.html"
   },
   "permissions": [
